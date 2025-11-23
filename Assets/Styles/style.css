@@ -150,9 +150,15 @@ nav ul li button:hover {
   justify-content: center;
 }
 
-.box-contact {
+.box-contact form {
   gap: 1rem;
   display: flex;
+  flex-direction: column;
+}
+
+.box-contact form button {
+  cursor: pointer;
+  border-radius: 3px;
 }
 
 /* Ai Code */
