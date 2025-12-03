@@ -47,6 +47,39 @@ header label {
   color: var(--primaryTextColor);
 }
 
+/* Hamburger button */
+.hamburger {
+  width: 30px;
+  height: 25px;
+  display: none; /* default: hidden on desktop */
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 100%;
+  height: 4px;
+  background-color: #232e35;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+/* Hamburger animation when active */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(10px);
+  background: white;
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-10px);
+  background: white;
+}
+
 nav ul {
   gap: 20px;
   margin: 0;
@@ -184,79 +217,75 @@ footer {
   background-color: #232e35;
 }
 
-/* Ai Code */
-/* ============================= */
-/* RESPONSIVE DESIGN SECTION AI*/
-/* ============================= */
+/* ================================
+   RESPONSIVE DESIGN WITH AI
+   ================================ */
 
-/* Untuk Tablet (max-width: 992px) */
-@media (max-width: 992px) {
+/* ========== MOBILE (max-width: 576px) ========== */
+@media (max-width: 576px) {
+  /* Header */
   header {
+    padding: 10px;
+  }
+
+  .hamburger {
+    display: flex; /* show in mobile */
+  }
+
+  header nav {
+    position: fixed;
+    top: 0;
+    right: -100%; /* hide menu */
+    width: 250px;
+    height: 100vh;
+    background-color: #d7d7d7;
+    padding-top: 80px;
+    transition: 0.4s;
+  }
+
+  .dark header nav {
+    background-color: #232e35;
+  }
+
+  header nav ul {
     flex-direction: column;
-    height: auto;
-    padding: 15px;
-    text-align: center;
+    gap: 20px;
   }
 
-  nav ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
+  header nav ul li a {
+    color: #15181a !important;
+  }
+  .dark header nav ul li a {
+    color: #ffffff !important;
   }
 
+  /* When menu is active */
+  header nav.active {
+    right: 0;
+  }
+
+  /* HOME */
   .home {
     flex-direction: column;
-    gap: 5rem;
+    gap: 2rem;
     text-align: center;
-    padding: 2rem;
+    padding: 20px;
+    min-height: auto;
   }
 
+  .profile img {
+    width: 250px;
+  }
+
+  /* SKILLS */
   .skills {
     flex-direction: column;
-    gap: 2rem;
-    padding: 2rem;
+    margin-top: 1rem;
   }
 
   .skills-box {
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-  }
-
-  .project {
     flex-direction: column;
-    gap: 2rem;
-    padding: 2rem;
-  }
-
-  .contact {
-    flex-direction: column;
-    padding: 2rem;
-  }
-}
-
-/* Untuk Mobile (max-width: 600px) */
-@media (max-width: 600px) {
-  header label {
-    font-size: 18px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 5px;
-  }
-
-  nav ul li a,
-  nav ul li button {
-    display: block;
-    width: 100%;
-    text-align: center;
-  }
-
-  .home {
-    flex-direction: column;
-    gap: 2rem;
-    padding: 1rem;
+    gap: 1.5rem;
   }
 
   .skills-html,
@@ -267,24 +296,77 @@ footer {
     height: 150px;
   }
 
-  .skills {
-    flex-direction: column;
+  /* PROJECT */
+  .project {
+    margin-top: 1rem;
   }
 
-  .project,
-  .about,
-  .contact {
-    padding: 1rem;
+  .my-project iframe {
+    width: 300px;
+    height: 300px;
   }
 
-  .contain-skills {
+  /* CONTACT */
+  .box-contact form {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  textarea {
     width: 100%;
   }
+}
 
-  /* Contact Section */
-  .box-contact form {
-    gap: 1rem;
-    display: flex;
+/* ========== TABLET (max-width: 768px) ========== */
+@media (max-width: 768px) {
+  /* HOME */
+  .home {
     flex-direction: column;
+    gap: 3rem;
+    padding: 40px;
+  }
+
+  .profile img {
+    width: 300px;
+  }
+
+  /* SKILLS */
+  .skills-box {
+    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .skills-html,
+  .skills-css,
+  .skills-js,
+  .skills-php {
+    width: 180px;
+    height: 180px;
+  }
+
+  /* PROJECT */
+  .my-project iframe {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+/* ========== SMALL-LAPTOP (max-width: 992px) ========== */
+@media (max-width: 992px) {
+  header {
+    padding: 15px 20px;
+  }
+
+  nav ul {
+    gap: 15px;
+  }
+
+  .home {
+    gap: 6rem;
+  }
+
+  .profile img {
+    width: 350px;
   }
 }
