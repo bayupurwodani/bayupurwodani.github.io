@@ -18,6 +18,19 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.dark {
+  color: #ffffff;
+  background-color: #15181a;
+}
+
+.dark header label {
+  color: #ffffff;
+}
+
+.dark nav ul li button {
+  color: #15181a;
+}
+
 header {
   height: 65px;
   padding: 20px;
@@ -161,6 +174,16 @@ nav ul li button:hover {
   border-radius: 3px;
 }
 
+footer {
+  display: flex;
+  height: 100px;
+  color: #ffffff;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: #232e35;
+}
+
 /* Ai Code */
 /* ============================= */
 /* RESPONSIVE DESIGN SECTION AI*/
@@ -256,5 +279,12 @@ nav ul li button:hover {
 
   .contain-skills {
     width: 100%;
+  }
+
+  /* Contact Section */
+  .box-contact form {
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
   }
 }
