@@ -12,7 +12,6 @@
 }
 
 body {
-  overflow-x: hidden;
   color: rgb(36, 36, 36);
   background-color: aliceblue;
   font-family: "Roboto", sans-serif;
@@ -27,7 +26,20 @@ body {
   color: #ffffff;
 }
 
+.dark .hamburger span {
+  background-color: #ffffff;
+}
+
 .dark nav ul li button {
+  color: #15181a;
+}
+
+.dark .skills-html,
+.skills-css,
+.skills-js,
+.skills-php,
+.dark .project-web,
+.project-game {
   color: #15181a;
 }
 
@@ -116,6 +128,7 @@ nav ul li button {
 
 nav ul li a:hover,
 nav ul li button:hover {
+  color: #15181a;
   background-color: aquamarine;
   transition: 0.4s all ease-in-out;
 }
@@ -178,13 +191,32 @@ nav ul li button:hover {
 
 /* Project Section */
 .project {
-  gap: 2rem;
   display: flex;
   margin-top: 2rem;
   min-height: 100vh;
   align-items: center;
   text-align: center;
   justify-content: center;
+}
+
+.my-project {
+  width: 550px;
+  height: 250px;
+  border-radius: 5px;
+  background-color: #e8e8e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.project-web,
+.project-game {
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+  background-color: #c4c4c4;
+  display: inline-block;
 }
 
 /* Contact Section */
@@ -301,9 +333,15 @@ footer {
     margin-top: 1rem;
   }
 
-  .my-project iframe {
-    width: 300px;
-    height: 300px;
+  .my-project {
+    width: 450px;
+    height: 250px;
+  }
+
+  .project-web,
+  .project-game {
+    width: 150px;
+    height: 150px;
   }
 
   /* CONTACT */
