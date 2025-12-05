@@ -30,4 +30,11 @@ document.addEventListener("click", function (e) {
 
 function toggleMode() {
   document.body.classList.toggle("dark");
+  const button = document.querySelector("nav ul li button");
+
+  if (document.body.classList.contains("dark")) {
+    button.textContent = "Light Mode";
+  } else {
+    button.textContent = "Dark Mode";
+  }
 }

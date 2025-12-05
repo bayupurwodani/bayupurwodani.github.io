@@ -291,6 +291,10 @@ footer {
     color: #ffffff !important;
   }
 
+  .dark header nav ul li a:hover {
+    color: #15181a !important;
+  }
+
   /* When menu is active */
   header nav.active {
     right: 0;
