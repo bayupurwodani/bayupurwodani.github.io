@@ -44,6 +44,8 @@ body {
 }
 
 header {
+  position: sticky;
+  top: 0;
   height: 65px;
   padding: 20px;
   display: flex;
