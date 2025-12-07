@@ -119,6 +119,10 @@ nav ul li a {
   text-decoration: none;
 }
 
+nav ul li a:active {
+  border-bottom: 1px solid aquamarine;
+}
+
 nav ul li button {
   border: none;
   color: inherit;
@@ -131,6 +135,7 @@ nav ul li button {
 nav ul li a:hover,
 nav ul li button:hover {
   color: #15181a;
+  transform: scale(1.1);
   background-color: aquamarine;
   transition: 0.4s all ease-in-out;
 }
@@ -340,8 +345,8 @@ footer {
   }
 
   .my-project {
-    width: 450px;
-    height: 250px;
+    width: 360px;
+    height: 260px;
   }
 
   .project-web,
